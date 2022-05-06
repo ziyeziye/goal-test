@@ -14,11 +14,10 @@ func UserQuery() *table.Table {
 }
 
 type User struct {
-	Id       string `json:"id"`
-	Address  string `json:"address"`
-	Amount   string `json:"amount"`
-	Recharge string `json:"recharge"`
-	Hash     string `json:"hash"`
+	Id      string `json:"id"`
+	Name    string `json:"name"`
+	Address string `json:"address"`
+	Age     int    `json:"age"`
 }
 
 // GetId 实现 auth 需要的方法

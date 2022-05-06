@@ -8,6 +8,6 @@ import (
 func GetUsers(request contracts.HttpRequest) interface{} {
 	return contracts.Fields{
 		"name":   request.StringOption("name", "user hello"),
-		"models": models.UserQuery().Select("address", "recharge", "hash").Where("recharge", ">", 0).Get().ToArrayFields(),
+		"models": models.UserQuery().Select("name", "address", "age").Where("age", ">", 0).Get().ToArrayFields(),
 	}
 }

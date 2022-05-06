@@ -11,6 +11,7 @@ func NewKernel(app contracts.Application) contracts.Console {
 	return &Kernel{console.NewKernel(app, []contracts.CommandProvider{
 		commands.Runner,
 		commands2.NewHello,
+		commands2.NewTest,
 	}), app}
 }
 
